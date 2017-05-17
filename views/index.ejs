@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+  <form action="/settings" method="post">
+    Temp Max:
+    <input type="text" name="tempmax" value="<%= settings['tempmax'] %>"><br/>
+    Temp Min:
+    <input type="text" name="tempmin" value="<%= settings['tempmin'] %>"><br/>
+    Humidity Max:
+    <input type="text" name="humidmax" value="<%= settings['humidmax'] %>"><br/>
+    Humidity Min:
+    <input type="text" name="humidmin" value="<%= settings['humidmin'] %>"><br/>
+    Lum Max:
+    <input type="text" name="lummax" value="<%= settings['lummax'] %>"><br/>
+    Lum Min:
+    <input type="text" name="lummin" value="<%= settings['lummin'] %>"><br/>
+    <input type="submit" value="Submit"><br/>
+  </form>
+  </body>
+</html>
