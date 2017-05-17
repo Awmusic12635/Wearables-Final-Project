@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var firebase = require('firebase');
 var db = firebase.database();
-
+var app = express();
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
