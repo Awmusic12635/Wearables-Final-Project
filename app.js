@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var dotenv = require('dotenv').config();
+var cors = require('cors');
 
 // FIREBASE stuff
 var firebase = require("firebase");
@@ -25,6 +26,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
