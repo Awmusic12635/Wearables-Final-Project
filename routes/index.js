@@ -38,7 +38,7 @@ router.post('/history/add', function(req, res, next) {
 
 router.get('/history', function(req, res, next) {
 
-    db.ref('/history').limitToLast(10).once('value').then(function (snapshot) {
+    db.ref('/history').limitToFirst(10).once('value').then(function (snapshot) {
         var events = snapshot.val();
         return res.json(events);
     });
